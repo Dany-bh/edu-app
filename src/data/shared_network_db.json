@@ -1,0 +1,37 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre_completo": "Fernando Gonzales Zavaleta",
+      "usuario": "admin",
+      "password_hash": "kdf_v1$10000$b5d0fa5f-5e3a-49a4-a8c2-3e87a0421798$2383d70a2b84b446b47149210b0e137cadbbe2e591898e560a1ed34c8edd73b6a9a2054f01931ffa3e2871763d5abf0cf01ac89682f6b86deb63acfde13a419c",
+      "salt": "b5d0fa5f-5e3a-49a4-a8c2-3e87a0421798",
+      "grado": "Super Administrador",
+      "genero": "Masculino",
+      "rol": "admin",
+      "estado": "activo",
+      "puntos": 50,
+      "nivel": 1,
+      "fecha_registro": "2026-08-06 00:33:45"
+    },
+    {
+      "id": 2,
+      "nombre_completo": "Dany",
+      "usuario": "dany",
+      "password_hash": "kdf_v1$10000$b5d0fa5f-5e3a-49a4-a8c2-3e87a0421798$2383d70a2b84b446b47149210b0e137cadbbe2e591898e560a1ed34c8edd73b6a9a2054f01931ffa3e2871763d5abf0cf01ac89682f6b86deb63acfde13a419c",
+      "salt": "b5d0fa5f-5e3a-49a4-a8c2-3e87a0421798",
+      "grado": "5to",
+      "genero": "Masculino",
+      "rol": "estudiante",
+      "estado": "activo",
+      "puntos": 50,
+      "nivel": 1,
+      "fecha_registro": "2026-08-06 00:33:45"
+    }
+  ],
+  "solicitudes_password": [],
+  "eliminados": [
+    "alexander",
+    "alex"
+  ]
+}

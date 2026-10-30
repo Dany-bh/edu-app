@@ -1,0 +1,78 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+example
+
+# generated native folders
+/ios
+/android
+
+# Test files and test data (not source)
+src/app/__tests__/**/mitosUtils.*
+src/db/__tests__/database.test.tsx
+src/lib/__tests__/*.test.ts
+
+# Generated/data files (auto-created, not source)
+src/app/mitos.tsx
+src/data/mitosData.ts
+design-reference/
+
+# Large project files / caches
+*.profraw
+*.profdata
+
+# Local research data and source documents
+/Base_Datos/
+/Cuadros_Estadisticos/
+/DNT/
+/Doc_Metodologicos/
+repomix-output.xml
+
+# Large archives and binaries
+*.pdf
+*.zip
+*.apk
+PPP1*.docx
+scratch/
+scripts/__pycache__/
+scripts/download_latest_apk.py
+
+.vercel
+build_output.json
+.claude/

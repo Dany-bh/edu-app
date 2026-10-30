@@ -1,0 +1,14 @@
+android/
+ios/
+.expo/
+dist/
+node_modules/
+*.apk
+*.aab
+*.zip
+*.pdf
+*.sav
+DNT/
+Base_Datos/
+informacion_complementaria/
+.git/

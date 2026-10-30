@@ -1,0 +1,32 @@
+{
+  "cli": {
+    "version": ">= 14.2.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyBIlJ3mIAP0Xj8NOBbREdl5VctTNkXMV-8",
+        "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "appeducativa-b2ad5.firebaseapp.com",
+        "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "appeducativa-b2ad5",
+        "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "appeducativa-b2ad5.firebasestorage.app",
+        "EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "751729342889",
+        "EXPO_PUBLIC_FIREBASE_APP_ID": "1:751729342889:web:7fd119e2d5f22e9f5e6cb8"
+      }
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

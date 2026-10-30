@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Función helper para verificar autenticación
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Función helper para verificar si el usuario accede a sus propios datos
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Función helper para verificar rol de administrador mediante claim (seguro)
+    function isAdmin() {
+      return isAuthenticated() && request.auth.token.admin == true;
+    }
+
+    // Colección de Usuarios: Solo el dueño puede leer/editar su perfil (sin cambiar rol), admins pueden todo
+    match /usuarios/{userId} {
+      allow read: if isAuthenticated() && (isOwner(userId) || isAdmin());
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && (
+        (isOwner(userId) && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['rol', 'estado'])) || isAdmin()
+      );
+      allow delete: if isAdmin();
+    }
+
+    // Colección de Progreso y Gamificación
+    match /progreso/{progressId} {
+      allow read: if isAuthenticated() && (resource.data.usuario_id == request.auth.uid || isAdmin());
+      allow create: if isAuthenticated();
+      allow update, delete: if isAdmin();
+    }
+
+    // Contenido Educativo y Manuales: Lectura pública autenticada, escritura solo admin
+    match /contenido_educativo/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Regla de denegación por defecto para cualquier otra colección no especificada
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

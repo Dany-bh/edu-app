@@ -1,0 +1,36 @@
+:root {
+  --font-display:
+    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+/* Scrollbars visibles y fáciles de arrastrar en laptops y navegadores web */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #00F5D4;
+  border-radius: 6px;
+  border: 2px solid rgba(15, 23, 42, 0.85);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+/* Soporte para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00F5D4 rgba(15, 23, 42, 0.85);
+}
